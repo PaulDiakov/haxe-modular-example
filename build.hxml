@@ -1,0 +1,37 @@
+-cp lib
+-cp src
+-debug
+-dce full
+
+--macro Stub.modules()
+--each
+
+-js build/application.js
+application.Test
+--macro exclude('framework')
+--macro exclude('modules')
+--macro exclude('common')
+--next
+
+-js build/dummy.js
+modules.dummy.Dummy
+--macro exclude('common')
+
+--next
+
+-js build/mighty.js
+modules.mighty.Mighty
+--macro exclude('common')
+
+--next
+
+-js build/tiny.js
+modules.tiny.Tiny
+--macro exclude('common')
+
+--next
+
+-js build/framework.js
+-lib redhawk
+-main Main
+--macro exclude('modules')
