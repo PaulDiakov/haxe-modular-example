@@ -4,6 +4,8 @@ import js.Browser;
 import js.html.LinkElement;
 import js.html.ScriptElement;
 
+@:expose
+@:keep
 class Require {
 	static public var jsPath = './build/';
 	static var required:Array<String> = new Array();

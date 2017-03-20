@@ -32,6 +32,6 @@ modules.tiny.Tiny
 --next
 
 -js build/framework.js
--lib redhawk
 -main Main
 --macro exclude('modules')
+--macro exclude('application')
